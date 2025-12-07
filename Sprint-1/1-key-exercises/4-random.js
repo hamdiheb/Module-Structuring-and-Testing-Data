@@ -1,8 +1,8 @@
 const minimum = 1;
 const maximum = 100;
 
-let random_number=Math.random();
-const num = Math.floor(random_number * (maximum - minimum + 1)) + minimum;
+let random_number=Math.random(); //Math.random() is pre defined javascript function which generate an integer or float  
+const num = Math.floor(random_number * (maximum - minimum + 1)) + minimum; //Math.floor is pre defined javascript function which return the closest lowest number to the gived parameter 
 
 console.log(`Our random number is ${random_number} and if we multiply it by ${maximum+minimum+1} it will be = ${random_number * (maximum - minimum +1) + minimum} and the closest down round is ${num}`);
 
