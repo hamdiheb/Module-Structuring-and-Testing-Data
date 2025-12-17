@@ -6,6 +6,23 @@ test("should return 11 for Ace of Spades", () => {
     });
 
 // Case 2: Handle Number Cards (2-10):
+test("Should handle number card from 2 to 10", () => {
+    expect(getCardValue("2")).toEqual(2);
+    expect(getCardValue("10")).toEqual(10);
+    expect(getCardValue("6")).toEqual(6);
+    expect(getCardValue("9")).toEqual(9);
+})
 // Case 3: Handle Face Cards (J, Q, K):
+test("Should identify face card", () => {
+    expect(getCardValue("J")).toEqual(10);
+    expect(getCardValue("Q")).toEqual(10);
+    expect(getCardValue("K")).toEqual(10);
+})
 // Case 4: Handle Ace (A):
+test("Should identify Ace (A)", () => {
+    expect(getCardValue("A")).toEqual(11);
+})
 // Case 5: Handle Invalid Cards:
+test("Should handle invalid card", () => {
+    expect(getCardValue(21)).toEqual("Invalid card");
+})
