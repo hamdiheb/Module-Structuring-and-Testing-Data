@@ -24,3 +24,13 @@ test("password has at least 5 characters", () => {
     expect(result).toEqual(true);
 }
 );
+
+test("password should be validated", () => {
+    // Arrange
+    const password = "12345aA!";
+    // Act
+    const result = passwordValidator(password);
+    // Assert
+    expect(result).toEqual(true);
+}
+);

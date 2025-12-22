@@ -1,7 +1,23 @@
 function getAngleType(angle) {
-  if (angle === 90) return "Right angle";
+  if(angle  === 90){
+    return "Right angle";
+  }
+  else if (angle < 90){
+    return "Acute angle";
+  }
+  else if (angle < 180 && angle > 90) {
+    return "Obtuse angle";
+  }
+  else if (angle === 180){
+    return "Straight angle";
+  }
+  else if (angle < 360 && angle > 180) {
+    return "Reflex angle";
+  }
+  else{
+    return "This is not angle";
+  }
   // replace with your completed function from key-implement
-
 }
 
 
