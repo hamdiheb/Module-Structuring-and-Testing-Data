@@ -1,20 +1,30 @@
 function getOrdinalNumber(num) {
- let num_char = num.toString();
 
-    if(num_char[num_char.length-1] === "1"){
-        return `${num_char}st`
+    if (num == 1){
+        return `${num}st`;
     }
-
-    else if(num_char[num_char.length-1] === "2"){
-        return `${num_char}nd`;
+    else if (num == 2){
+        return `${num}nd`;
     }
-
-    else if(num_char[num_char.length-1] === "3"){
-        return `${num_char}rd`;
+    else if (num == 3){
+        return `${num}rd`;
     }
-
-    else {
-        return `${num_char}th`;
+    else if(num > 3 && num <= 13){
+        return `${num}th`;
+    }
+    else{
+        if (num % 10 == 1) {
+            return `${num}st`;
+        }
+        else if(num % 10 == 2){
+            return `${num}nd`;
+        }
+        else if(num % 10 == 3){
+            return `${num}rd`;
+        }
+        else{
+            return `${num}th`;
+        }
     }
 }
 
